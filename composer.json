@@ -1,0 +1,34 @@
+{
+    "name": "mobly/logger-laravel",
+    "description": "Laravel service provider for the Mobly Logger package",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "homepage": "https://github.com/mobly/logger-laravel",
+    "support": {
+        "issues": "https://github.com/mobly/logger-laravel/issues"
+    },
+    "keywords": [
+        "mobly",
+        "log",
+        "logger",
+        "laravel"
+    ],
+    "authors": [
+        {
+            "name": "Mobly Developers",
+            "email": "dev@mobly.com.br",
+            "homepage": "http://www.mobly.com.br"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "mobly/logger": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mobly\\LoggerLaravel\\": "src/"
+        }
+    }
+}
