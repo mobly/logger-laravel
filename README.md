@@ -1,15 +1,15 @@
-# Mobly Logger Service Provider for Laravel 4
+# Mobly Logger Service Provider for Laravel 5
 
-A simple [Laravel 4](http://laravel.com/) service provider for including the [Mobly Logger](https://github.com/mobly/logger) package in your Laravel project.
+A simple [Laravel 5](http://laravel.com/) service provider for including the [Mobly Logger](https://github.com/mobly/logger) package in your Laravel project.
 
 ## Installation
 
-The Mobly Logger Service Provider can be installed via [Composer](http://getcomposer.org) running `php composer.phar require mobly/logger-laravel:1.*` or adding manually in your project's `composer.json`:
+The Mobly Logger Service Provider can be installed via [Composer](http://getcomposer.org) running `php composer.phar require mobly/logger-laravel:2.*` or adding manually in your project's `composer.json`:
 
 ```json
 {
     "require": {
-        "mobly/logger": "1.*"
+        "mobly/logger": "2.*"
     }
 }
 ```
