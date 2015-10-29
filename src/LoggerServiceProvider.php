@@ -18,7 +18,7 @@ class LoggerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('mobly/logger');
+        //
     }
 
     /**
@@ -29,19 +29,9 @@ class LoggerServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->alias('MoblyLogger', 'Mobly\LoggerLaravel\Facades\Logger');
-        $this->app->alias('MoblyLoggerProcessor', 'Mobly\LoggerLaravel\Facades\LoggerProcessor');
-        $this->app->alias('MoblyLoggerHandler', 'Mobly\LoggerLaravel\Facades\LoggerHandler');
 
-        $this->app->bind('mobly.logger.processor', function ($app) {
-            return $app->make('Mobly\LoggerLaravel\Manager\LoggerProcessorManager');
-        });
-
-        $this->app->bind('mobly.logger.processor', function ($app) {
-            return $app->make('Mobly\LoggerLaravel\Manager\LoggerProcessorManager');
-        });
-
-        $this->app->bind('mobly.logger.handler', function ($app) {
-            return $app->make('Mobly\LoggerLaravel\Manager\LoggerHandlerManager');
+        $this->app->bind('mobly.logger', function ($app) {
+            return $app->make('Mobly\LoggerLaravel\Manager\LoggerManager');
         });
     }
 
@@ -54,8 +44,6 @@ class LoggerServiceProvider extends ServiceProvider
     {
         return [
             'mobly.logger',
-            'mobly.logger.processor',
-            'mobly.logger.handler'
         ];
     }
 }

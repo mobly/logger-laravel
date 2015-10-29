@@ -20,6 +20,26 @@ Then run a composer update:
 php composer.phar update
 ```
 
+To use the Mobly Logger Service Provider you must register the provider when bootstrapping your Laravel application.
+
+Find the `providers` key in you `config/app.php` and register the Mobly Logger Service Provider as below:
+
+```php
+	'providers' => [
+		// ...
+		Mobly\LoggerLaravel\LoggerServiceProvider::class,
+	]
+```
+
+Find the `aliases` key in you `config/app.php` and add the Mobly Logger facades:
+
+```php
+	'providers' => [
+		// ...
+		'MoblyLogger' => Mobly\LoggerLaravel\Facades\Logger::class,
+	]
+```
+
 ## Links
 
 * [Mobly Logger](http://github.com/mobly/logger/)
